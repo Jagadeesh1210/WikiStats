@@ -29,8 +29,8 @@ echo "AverageDayHits   -> ".$rcount/$day."\n\n";
 echo "-------------------------------------------\n";
 }
 ?>
------------------------------------------------------------------------------------------
-//Results:
+
+#Results:
 By using this alogorithm we can get the results which will be useful.
 
 //for example 
