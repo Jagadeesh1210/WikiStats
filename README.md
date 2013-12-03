@@ -4,7 +4,7 @@ WikiStats
 Simple PHP Algorithm to Get Wikipedia Hits for Given Keyword
 
 
-
+--------------------------------------------------------------------------------
 <?php
 //Algorithm for WikiStats
 
@@ -29,7 +29,7 @@ echo "AverageDayHits   -> ".$rcount/$day."\n\n";
 echo "-------------------------------------------\n";
 }
 ?>
-
+-----------------------------------------------------------------------------------------
 //Results:
 By using this alogorithm we can get the results which will be useful.
 
@@ -40,6 +40,8 @@ So tried some popular names applied to this algorithm.
 
 And i got the results like this some are expected and some are unexpected.
 I got these results on Tue Dec  3 17:39:05 IST 2013
+
+salman_khan win this test.
 
 -------------------------------------------
 Wiki Statasticts for Keyword :: Chiranjeevi
@@ -111,14 +113,6 @@ Wiki Statasticts for Keyword :: ajith_kumar
 PresentMonthHits -> 8501
 
 AverageDayHits   -> 2833.6666666667
-
--------------------------------------------
--------------------------------------------
-Wiki Statasticts for Keyword :: vijay
-
-PresentMonthHits -> 320
-
-AverageDayHits   -> 106.66666666667
 
 -------------------------------------------
 -------------------------------------------
