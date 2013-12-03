@@ -6,7 +6,7 @@ Simple PHP Algorithm to Get Wikipedia Hits for Given Keyword
 
 
 <?php
-#Algorithm for WikiStats
+//Algorithm for WikiStats
 
 while(1)
 {
