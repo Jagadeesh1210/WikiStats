@@ -41,7 +41,6 @@ So tried some popular names applied to this algorithm.
 And i got the results like this some are expected and some are unexpected.
 I got these results on Tue Dec  3 17:39:05 IST 2013
 
-salman_khan win this test.
 
 -------------------------------------------
 Wiki Statasticts for Keyword :: Chiranjeevi
@@ -134,7 +133,7 @@ AverageDayHits   -> 2250
 
 
 
-
+salman_khan win this test.
 
 
 
