@@ -36,7 +36,7 @@ By using this algorithm we can get the results which will be useful in different
 //Test 1: 
 #i want to know who is the most viewd actor in web <india>.
 
-So tried some popular names applied to this algorithm.
+So tried some popular names and applied to this algorithm.
 
 And i got the results like this some are expected and some are unexpected.
 I got these results on Tue Dec  3 17:39:05 IST 2013
