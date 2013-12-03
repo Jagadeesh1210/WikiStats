@@ -31,10 +31,10 @@ echo "-------------------------------------------\n";
 ?>
 
 #Results:
-By using this alogorithm we can get the results which will be useful.
+By using this algorithm we can get the results which will be useful in different fields.
 
-//for example 
-i want to know who is the most viewd actor in web <india>.
+//Test 1: 
+#i want to know who is the most viewd actor in web <india>.
 
 So tried some popular names applied to this algorithm.
 
