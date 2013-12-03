@@ -130,6 +130,22 @@ PresentMonthHits -> 6750
 AverageDayHits   -> 2250
 
 -------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: Hrithik_Roshan
+
+PresentMonthHits -> 12804
+
+AverageDayHits   -> 4268
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: ranbir_kapoor
+
+PresentMonthHits -> 16847
+
+AverageDayHits   -> 5615.6666666667
+
+-------------------------------------------
 
 
 
