@@ -7,7 +7,7 @@ Simple PHP program to Get Wikipedia Hits for Given Keyword.
 --------------------------------------------------------------------------------
 <?php
 //Algorithm for WikiStats --JJ
-
+$tmp=0;
 while(1)
 {
 echo "***Welcome to Wikistats***\n";
@@ -21,14 +21,22 @@ $rurl="curl 'http://stats.grok.se/en/".date("Y").date("m")."/".$var."' | grep 'h
 $data=system($rurl);
 $split = explode(" ", $data);
 $rcount=$split[count($split)-1];
+if(($rcount/$day) >= $tmp)
+{
+$tmp=$rcount/$day;
+$name=$var;
+}
 
 echo "\n\n-------------------------------------------";
 echo "\nWiki Statasticts for Keyword :: ".$var;
 echo "\nPresentMonthHits -> ".$rcount."\n\n";
 echo "AverageDayHits   -> ".$rcount/$day."\n\n";
 echo "-------------------------------------------\n";
+echo "Top Scorer     <-> ".$name."AverageDay Hits   -> ".$tmp."\n";
+echo "-------------------------------------------\n";
 }
 ?>
+     
 
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
