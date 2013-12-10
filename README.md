@@ -6,7 +6,7 @@ Simple PHP program to Get Wikipedia Hits for Given Keyword.
 
 --------------------------------------------------------------------------------
 <?php
-//Algorithm for WikiStats --JJ
+//Algorithm for WikiStats
 error_reporting(E_ERROR);
 $tmp=0;
 while(1)
@@ -22,22 +22,28 @@ $rurl="curl 'http://stats.grok.se/en/".date("Y").date("m")."/".$var."' | grep 'h
 $data=system($rurl);
 $split = explode(" ", $data);
 $rcount=$split[count($split)-1];
-if(($rcount/$day) >= $tmp)
+$mdataurl="curl 'http://stats.grok.se/en/latest30/".$var."' | grep 'has been'";
+//$data=system("curl 'http://stats.grok.se/en/201312/india' | grep 'has been'");
+$mdata=system($mdataurl);
+$msplit = explode(" ", $mdata);
+$mcount=$msplit[count($msplit)-1];
+$count=(($mcount/30)+($rcount/$day))/2;
+if($count >= $tmp)
 {
-$tmp=$rcount/$day;
+$tmp=$count;
 $name=$var;
 }
 
 echo "\n\n-------------------------------------------";
 echo "\nWiki Statasticts for Keyword :: ".$var;
-echo "\nPresentMonthHits -> ".$rcount."\n\n";
-echo "AverageDayHits   -> ".$rcount/$day."\n\n";
+echo "\nPresentMonthHits -> ".$rcount."\n";
+echo "Last30DaysHits   -> ".$mcount."\n\n";
+echo "AverageDayHits   -> ".$count."\n\n";
 echo "-------------------------------------------\n";
 echo "Top Scorer     <-> ".$name."AverageDay Hits   -> ".$tmp."\n";
 echo "-------------------------------------------\n";
 }
 ?>
-     
 
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
