@@ -19,12 +19,12 @@ $var=str_replace(' ','_',$var);
 $day=date("d");
 $rurl="curl 'http://stats.grok.se/en/".date("Y").date("m")."/".$var."' | grep 'has been'";
 //$data=system("curl 'http://stats.grok.se/en/201312/india' | grep 'has been'");
-$data=system($rurl);
+$data=exec($rurl);
 $split = explode(" ", $data);
 $rcount=$split[count($split)-1];
 $mdataurl="curl 'http://stats.grok.se/en/latest30/".$var."' | grep 'has been'";
-//$data=system("curl 'http://stats.grok.se/en/201312/india' | grep 'has been'");
-$mdata=system($mdataurl);
+//$data=exec("curl 'http://stats.grok.se/en/201312/india' | grep 'has been'");
+$mdata=exec($mdataurl);
 $msplit = explode(" ", $mdata);
 $mcount=$msplit[count($msplit)-1];
 $count=(($mcount/30)+($rcount/$day))/2;
@@ -44,7 +44,6 @@ echo "Top Scorer     <-> ".$name."AverageDay Hits   -> ".$tmp."\n";
 echo "-------------------------------------------\n";
 }
 ?>
-
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
 
