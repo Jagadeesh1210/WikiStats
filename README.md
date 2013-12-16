@@ -48,7 +48,7 @@ echo "-------------------------------------------\n";
 By using this algorithm we can get the results which will be useful in different fields.
 
 //Test 1: 
-#i want to know who is the most viewed actor in web(india).
+#i want to know who was the most viewed actor in web(india).
 
 So tried some popular names and applied to this algorithm.
 
