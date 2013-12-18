@@ -5,10 +5,11 @@ Simple PHP program to Get Wikipedia Hits for Given Keyword.
 
 
 --------------------------------------------------------------------------------
-<?php
+?php
 //Algorithm for WikiStats
 error_reporting(E_ERROR);
 $tmp=0;
+$pmcount=0;
 while(1)
 {
 echo "***Welcome to Wikistats***\n";
@@ -28,12 +29,22 @@ $mdata=exec($mdataurl);
 $msplit = explode(" ", $mdata);
 $mcount=$msplit[count($msplit)-1];
 $count=(($mcount/30)+($rcount/$day))/2;
-if($count >= $tmp)
+$pm=($rcount/$day);
+if($count > $tmp)
 {
 $tmp=$count;
+$pmcount=$pm;
 $name=$var;
 }
-
+else if($count == $tmp)
+{
+        if($pmcount <= $pm)
+        {
+        $tmp=$count;
+        $pmcount=$pm;
+        $name=$var;
+        }
+}
 echo "\n\n-------------------------------------------";
 echo "\nWiki Statasticts for Keyword :: ".$var;
 echo "\nPresentMonthHits -> ".$rcount."\n";
@@ -46,8 +57,91 @@ echo "-------------------------------------------\n";
 ?>
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
+//Test 2: 
+#I want to know which is most searched programming language in internet.
 
-//Test 1: 
+So tried some popular names and applied to this algorithm.
+
+-------------------------------------------
+Wiki Statasticts for Keyword :: c
+
+PresentMonthHits -> 19788
+Last30DaysHits   -> 34909
+
+AverageDayHits   -> 1131.4833333333
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: c++
+
+PresentMonthHits -> 73383
+Last30DaysHits   -> 138306
+
+AverageDayHits   -> 4343.5166666667
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: objective_c
+
+PresentMonthHits -> 684
+Last30DaysHits   -> 1178
+
+AverageDayHits   -> 38.633333333333
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: c#
+
+PresentMonthHits -> 19788
+Last30DaysHits   -> 34909
+
+AverageDayHits   -> 1131.4833333333
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: java
+
+PresentMonthHits -> 4182567
+Last30DaysHits   -> 5983943
+
+AverageDayHits   -> 215914.8
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: basic
+
+PresentMonthHits -> 23047
+Last30DaysHits   -> 40510
+
+AverageDayHits   -> 1315.3611111111
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: php
+
+PresentMonthHits -> 97150
+Last30DaysHits   -> 177957
+
+AverageDayHits   -> 5664.5611111111
+
+-------------------------------------------
+-------------------------------------------
+Wiki Statasticts for Keyword :: perl
+
+PresentMonthHits -> 23902
+Last30DaysHits   -> 41041
+
+AverageDayHits   -> 1347.9611111111
+
+-------------------------------------------
+-------------------------------------------
+#Top Scorer     <-> java
+#AverageDay Hits   -> 215914.8
+-------------------------------------------
+
+
+
+//Test 2: 
 #i want to know who was the most viewed actor in web(india).
 
 So tried some popular names and applied to this algorithm.
@@ -59,106 +153,123 @@ I got these results on Tue Dec  3 17:39:05 IST 2013
 -------------------------------------------
 Wiki Statasticts for Keyword :: Chiranjeevi
 
-PresentMonthHits -> 3205
+PresentMonthHits -> 28512
+Last30DaysHits   -> 49691
 
-AverageDayHits   -> 1068.3333333333
+AverageDayHits   -> 1620.1833333333
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: kamal_haasan
 
-PresentMonthHits -> 6934
+PresentMonthHits -> 53430
+Last30DaysHits   -> 108165
 
-AverageDayHits   -> 2311.3333333333
+AverageDayHits   -> 3286.9166666667
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Amitabh_Bachchan
 
-PresentMonthHits -> 12866
+PresentMonthHits -> 101416
+Last30DaysHits   -> 185827
 
-AverageDayHits   -> 4288.6666666667
+AverageDayHits   -> 5914.2277777778
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: salman_khan
 
-PresentMonthHits -> 44594
+PresentMonthHits -> 290944
+Last30DaysHits   -> 447919
 
-AverageDayHits   -> 14864.666666667
+AverageDayHits   -> 15547.094444444
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Aamir_Khan
 
-PresentMonthHits -> 17599
+PresentMonthHits -> 168618
+Last30DaysHits   -> 268676
 
-AverageDayHits   -> 5866.3333333333
+AverageDayHits   -> 9161.7666666667
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Shahrukh_Khan
 
-PresentMonthHits -> 23035
+PresentMonthHits -> 169155
+Last30DaysHits   -> 300681
 
-AverageDayHits   -> 7678.3333333333
+AverageDayHits   -> 9710.1
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Rajinikanth
 
-PresentMonthHits -> 10691
+PresentMonthHits -> 144571
+Last30DaysHits   -> 209104
 
-AverageDayHits   -> 3563.6666666667
+AverageDayHits   -> 7500.9277777778
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Vijay_(actor)
 
-PresentMonthHits -> 12685
+PresentMonthHits -> 96642
+Last30DaysHits   -> 174502
 
-AverageDayHits   -> 4228.3333333333
+AverageDayHits   -> 5592.8666666667
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: ajith_kumar
 
-PresentMonthHits -> 8501
+PresentMonthHits -> 73817
+Last30DaysHits   -> 136162
 
-AverageDayHits   -> 2833.6666666667
+AverageDayHits   -> 4319.8388888889
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: mahesh_babu
 
-PresentMonthHits -> 8826
+PresentMonthHits -> 69254
+Last30DaysHits   -> 125721
 
-AverageDayHits   -> 2942
+AverageDayHits   -> 4019.0722222222
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: pawan_kalyan
 
-PresentMonthHits -> 6750
+PresentMonthHits -> 48658
+Last30DaysHits   -> 90285
 
-AverageDayHits   -> 2250
+AverageDayHits   -> 2856.3611111111
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: Hrithik_Roshan
 
-PresentMonthHits -> 12804
+PresentMonthHits -> 192883
+Last30DaysHits   -> 287604
 
-AverageDayHits   -> 4268
+AverageDayHits   -> 10151.261111111
 
 -------------------------------------------
 -------------------------------------------
 Wiki Statasticts for Keyword :: ranbir_kapoor
 
-PresentMonthHits -> 16847
+PresentMonthHits -> 151722
+Last30DaysHits   -> 236749
 
-AverageDayHits   -> 5615.6666666667
+AverageDayHits   -> 8160.3166666667
 
+-------------------------------------------
+-------------------------------------------
+#Top Scorer     <-> salman_khan
+#AverageDay Hits   -> 15547.094444444
 -------------------------------------------
 
 
