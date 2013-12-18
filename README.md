@@ -82,21 +82,12 @@ AverageDayHits   -> 4343.5166666667
 
 -------------------------------------------
 -------------------------------------------
-Wiki Statasticts for Keyword :: objective_c
+Wiki Statasticts for Keyword :: Objective-C
 
-PresentMonthHits -> 684
-Last30DaysHits   -> 1178
+PresentMonthHits -> 25748
+Last30DaysHits   -> 45738
 
-AverageDayHits   -> 38.633333333333
-
--------------------------------------------
--------------------------------------------
-Wiki Statasticts for Keyword :: c#
-
-PresentMonthHits -> 19788
-Last30DaysHits   -> 34909
-
-AverageDayHits   -> 1131.4833333333
+AverageDayHits   -> 1477.5222222222
 
 -------------------------------------------
 -------------------------------------------
