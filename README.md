@@ -64,12 +64,12 @@ By using this algorithm we can get the results which will be useful in different
 So tried some popular programming languages and applied to this algorithm.
 
 -------------------------------------------
-Wiki Statasticts for Keyword :: c
+Wiki Statasticts for Keyword :: C_(programming_language)
 
-PresentMonthHits -> 19788
-Last30DaysHits   -> 34909
+PresentMonthHits -> 112287
+Last30DaysHits   -> 211603
 
-AverageDayHits   -> 1131.4833333333
+AverageDayHits   -> 6645.8
 
 -------------------------------------------
 -------------------------------------------
