@@ -5,8 +5,8 @@ Simple PHP program to Get Wikipedia Hits for Given Keyword.
 
 
 --------------------------------------------------------------------------------
-?php
-//Algorithm for WikiStats -Jagadeesh J
+<?php
+//Algorithm for WikiStats - Author --> Jagadeesh J ;
 error_reporting(E_ERROR);
 $tmp=0;
 $pmcount=0;
