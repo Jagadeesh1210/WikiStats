@@ -57,7 +57,8 @@ echo "-------------------------------------------\n";
 ?>
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
-//Test 2: 
+
+#Test Case 1: 
 #I want to know which is most searched programming language in internet.
 
 So tried some popular programming languages and applied to this algorithm.
@@ -141,7 +142,7 @@ AverageDayHits   -> 1347.9611111111
 
 
 
-//Test 2: 
+#Test Case 2: 
 #i want to know who was the most viewed actor in web(india).
 
 So tried some popular names and applied to this algorithm.
