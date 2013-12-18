@@ -6,7 +6,7 @@ Simple PHP program to Get Wikipedia Hits for Given Keyword.
 
 --------------------------------------------------------------------------------
 ?php
-//Algorithm for WikiStats
+//Algorithm for WikiStats -Jagadeesh J
 error_reporting(E_ERROR);
 $tmp=0;
 $pmcount=0;
@@ -60,7 +60,7 @@ By using this algorithm we can get the results which will be useful in different
 //Test 2: 
 #I want to know which is most searched programming language in internet.
 
-So tried some popular names and applied to this algorithm.
+So tried some popular programming languages and applied to this algorithm.
 
 -------------------------------------------
 Wiki Statasticts for Keyword :: c
@@ -273,8 +273,6 @@ AverageDayHits   -> 8160.3166666667
 -------------------------------------------
 
 
-
-(salman_khan win this test.)
 
 
 
