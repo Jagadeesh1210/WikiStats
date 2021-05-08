@@ -4,8 +4,7 @@ WikiStats
 Simple PHP program to Get Wikipedia Hits for Given Keyword.
 
 --------------------------------------------------------------------------------
-###Command to run the scrit: php wiki_stats.php
---------------------------------------------------------------------------------
+Command to run the scrit: php wiki_stats.php
 
 #Results:
 By using this algorithm we can get the results which will be useful in different fields.
